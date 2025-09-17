@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Post } from "../src/types";
+import { Post } from "../types";
+
 
 type Props = {
   post: Post;
@@ -21,10 +22,7 @@ export default function PostItem({ post, isExpanded, onToggle }: Props) {
           <Text style={styles.user}>User ID: {post.userId}</Text>
         </View>
 
-        <TouchableOpacity
-          style={styles.viewRow}
-          onPress={() => onToggle(post.id)}
-        >
+        <TouchableOpacity style={styles.viewRow} onPress={() => onToggle(post.id)}>
           <Text style={styles.viewText}>{isExpanded ? "Hide" : "View"}</Text>
           <Text style={styles.toggle}>{isExpanded ? "▲" : "▼"}</Text>
         </TouchableOpacity>
@@ -65,23 +63,8 @@ const styles = StyleSheet.create({
   user: { color: "#9ca8b8", marginTop: 4, fontSize: 12 },
   toggle: { color: "#a4efb8ff", fontSize: 14, marginLeft: 4 },
   expanded: { marginTop: 12 },
-  label: {
-    fontWeight: "bold",
-    fontSize: 14,
-    color: "lightgreen",
-    marginTop: 8,
-  },
-  content: {
-    color: "#d7dce3",
-    fontSize: 14,
-    marginBottom: 6,
-  },
-  viewRow: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  viewText: {
-    color: "#a4efb8ff",
-    fontWeight: "600",
-  },
+  label: { fontWeight: "bold", fontSize: 14, color: "lightgreen", marginTop: 8 },
+  content: { color: "#d7dce3", fontSize: 14, marginBottom: 6 },
+  viewRow: { flexDirection: "row", alignItems: "center" },
+  viewText: { color: "#a4efb8ff", fontWeight: "600" },
 });
