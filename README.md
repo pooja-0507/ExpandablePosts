@@ -1,12 +1,11 @@
 # ExpandablePosts (React Native + TypeScript)
-A mobile app built with **React Native** and **TypeScript** that fetches posts from [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts) and displays them in an expandable, animated list.
+A mobile app built with **React Native** and **TypeScript** that fetches posts from [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts) and displays them in an expandable list.
 
 ## Features
 - Fetch posts from API
 - Expand / collapse individual posts
 - Expand all / Collapse all posts
 - Refresh posts
-- Smooth animations using `LayoutAnimation`
 - Mobile responsive design
 
 
